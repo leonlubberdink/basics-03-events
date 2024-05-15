@@ -25,8 +25,9 @@
     <button @click="decrement(5)">Remove 5</button>
     <p>Result: {{ counter }}</p>
     <input type="text"
-           v-model="name"
-           @keyup.enter="confirmName">
+           v-model="name">
+    <input type="text"
+           v-model="lastName">
     <button @click="resetInput">Reset Input</button>
     <p>Your name: {{ fullName }}</p>
     <!-- <form @submit.prevent="submitForm">
