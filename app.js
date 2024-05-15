@@ -3,7 +3,13 @@ const app = Vue.createApp({
     return {
       counter: 0,
       name: "",
+      confirmedName: "",
     };
+  },
+  computed: {
+    fullName() {
+      return this.name === "" ? "" : `${this.name} Lubberdink`;
+    },
   },
   methods: {
     increment(number) {
@@ -17,6 +23,13 @@ const app = Vue.createApp({
     },
     submitForm() {
       alert("Submitted Form!");
+    },
+    confirmName() {
+      console.log("safgsdfg");
+      this.confirmedName = this.name;
+    },
+    resetInput() {
+      this.name = "";
     },
   },
 });
